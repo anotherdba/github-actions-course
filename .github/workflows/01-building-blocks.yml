@@ -18,4 +18,4 @@ jobs:
             exit 1
 
         - name: GoodBye World
-          run: echo "GoodBye World"
+          run: echo "Good Bye World"
