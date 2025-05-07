@@ -8,7 +8,7 @@ jobs:
     steps:
     - name: Show OS
       run: |
-        echo "This job is running on $runner_OS"
+        echo "This job is running on $RUNNER_OS"
 
 
   Windows-echo:
@@ -16,7 +16,7 @@ jobs:
     steps:
     - name: Show OS
       run: |
-        echo "This job is running on $runner_OS"
+        echo "This job is running on $RUNNER_OS"
 
 
 
@@ -25,4 +25,4 @@ jobs:
     steps:
     - name: Show OS
       run: |
-        echo "This job is running on r$unner_OS"
+        echo "This job is running on $RUNNER_OS"
