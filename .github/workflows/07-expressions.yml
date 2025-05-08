@@ -9,8 +9,8 @@ jobs:
   echo:
     runs-on: ubuntu-latest
     steps:
-      - if: ${{ inputs.debug }} == "true"
       - name: [debug] Print Start-up data
+        if: ${{ inputs.debug }} == "true"
         run: |
           echo "Triggered by ${{ github.event_name }}"
           echo "branch Name : ${{ github.branch }}"
@@ -20,7 +20,7 @@ jobs:
           echo "Workflow: ${{ github.workflow }}"
           echo "Runner OS: ${{ $runner_os }}"
       - name: [debug] Print when triggered from main
-      - if: ${{ input.debug }} ==  true &&  ${{ github.ref }} = 'refs/head/main'
+        if: ${{ input.debug }} ==  true &&  ${{ github.ref }} = 'refs/head/main'
         run: |
           echo "Triggered from main"
 
