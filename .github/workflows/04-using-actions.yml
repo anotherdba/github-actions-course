@@ -1,0 +1,15 @@
+name: 04 - Using Actions
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Code
+      run: |
+        echo "checking out code"
+    - name: Printing folders
+      run: |
+        echo "Printing folders"
+
+
+
