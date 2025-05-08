@@ -16,9 +16,9 @@ jobs:
           echo "checking out code"
 
       - name: Install Dependencies
-        #   working-directory: 04-using-actions/react-app
+        working-directory: 04-using-actions/react-app
         run: npm ci
-        # run: npm test
+        # run:  npm test
         # run: npm
         
 
