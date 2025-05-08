@@ -18,7 +18,8 @@ jobs:
           echo "Commit SHA: ${{ github.sha }}"
           echo "Actor: ${{ github.actor }}" 
           echo "Workflow: ${{ github.workflow }}"
-          echo "Runner OS: $runner_os "
+          echo "Runner_OS: $RUNNER_OS  "
+          echo "Runner OS runner.os:  ${{ runner.os}}"
       - name: "[debug] Print when triggered from main"
         if: ${{ inputs.debug }} ==  true &&  ${{ github.ref }} = 'refs/head/main'
         run: |
