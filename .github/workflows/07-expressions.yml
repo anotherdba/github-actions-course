@@ -1,0 +1,26 @@
+name: 07-using expressions
+on:
+  workflow_dispatch:
+    inputs:
+      debug:
+        type: boolean
+        default: false
+jobs:
+  echo:
+    runs-on: ubuntu-latest
+    steps:
+      - if: ${{ inputs.debug }} == "true"
+      - name: [debug] Print Start-up data
+        run: |
+          echo "Triggered by ${{ github.event_name }}"
+          echo "branch Name : ${{ github.branch }}"
+          echo "Ref: ${{ github.ref }}"
+          echo "Commit SHA: ${{ github.sha }}"
+          echo "Actor: ${{ github.actor }}" 
+          echo "Workflow: ${{ github.workflow }}"
+          echo "Runner OS: ${{ $runner_os }}"
+      - name: [debug] Print when triggered from main
+      - if: ${{ input.debug }} ==  true &&  ${{ github.ref }} = 'refs/head/main'
+        run: |
+          echo "Triggered from main"
+
