@@ -1,5 +1,7 @@
 name: 07-using expressions
-run-name: 07-Using Expression | DEBUG - <'ON' if the debug is true, 'OFF' otherwise>
+run-name: 07-Using Expression | DEBUG - ${{ inputs.debug && 'ON' || 'OFF' }}
+
+
 on:
   workflow_dispatch:
     inputs:
