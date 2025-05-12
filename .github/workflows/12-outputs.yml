@@ -1,4 +1,4 @@
-name: 13 - working with outputs
+name: 12 - working with outputs
 on:
   workflow_dispatch:
     inputs:
@@ -14,11 +14,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print GITHUB_OUTPUT path
-        run: echo " ${{ vars.GITHUB_OUTPUT }}""
+        run: echo " ${{ GITHUB_OUTPUT }}""
 
       - id: build
         run: |
-          echo: " status ${{ inputs.build-status }}"
+          echo: "status=success" >> "${{ GITHUB_OUTPUT }}"
 
 
 
