@@ -17,8 +17,8 @@ jobs:
     steps:
       - name: Print GITHUB_OUTPUT path
         run: echo " $GITHUB_OUTPUT"
-
-      - id: build
+      - name: build
+        id: build
         run: |
           echo: "status=success" >> "$GITHUB_OUTPUT"
 
