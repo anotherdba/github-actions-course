@@ -1,4 +1,4 @@
-name: 05-1-Event Filters and Activity Type
+name: 05-2-Event Filters and Activity Type
 on:
   workflow_dispatch:
 
@@ -15,5 +15,5 @@ jobs:
         run: echo "Pull request number ${{ github.event.pull_request.number }}"
       - name: Show pull request title
         run: echo "Pull request title ${{ github.event.pull_request.title }}"
-      - name: print_pull_request_name
-        run: echo "Pull request name ${{ github.event.pull_request.head.ref }}"
+      - name: run_when_pr_closed
+        run: echo "Pull request is closed"
