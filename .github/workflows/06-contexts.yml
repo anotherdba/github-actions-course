@@ -15,5 +15,5 @@ jobs:
           echo "Workflow: ${{ github.workflow }}"
           echo "Run Id: ${{ github.run_id }}"
           echo "Run Numer: ${{ github.run_number }}"
-      - name: run-name
-          run-name= "my custome workflow run name - ${{ runner.os }}"
+      # - name: run-name
+      #     run-name= "my custome workflow run name - ${{ runner.os }}"
