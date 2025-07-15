@@ -1,0 +1,26 @@
+name: 07-using expressions
+on:
+  push:
+  workflow_dispatch:
+    inputs:
+      debug:
+        type: boolean
+        default: false
+jobs:
+  echo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: [debug] print start-up echo-data
+      - if: $${ input.debug }} ==  "debug"
+        run: |
+          echo " Triggered by : ${{ github.event_name }}"
+          echo " Branch : ${{ github.ref }}"
+          echo " commit sha: ${{ github.sha }}"
+          echo " Runner OS : ${{ runner.os }}"
+      # - name: [debug] print when triggered
+      # - if: $${ input.debug }} ==  "true"  and ${{ github.ref = /head/main }}
+      #   run: |
+      #     echo " Triggered by : ${{ github.event_name }}"
+      #     echo " Branch : ${{ github.ref }}"
+      #     echo " commit sha: ${{ github.sha }}"
+      #     echo " Runner OS : ${{ runner.os }}"
