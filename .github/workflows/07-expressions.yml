@@ -6,7 +6,7 @@ on:
       debug:
         type: boolean
         default: false
-run-name: "07 - Using expressions | DEBUG - <'ON' if the debug input is true, 'OFF' otherwise"
+run-name: "07 - Using expressions | DEBUG - -${{ inputs.debug && 'ON' || 'OFF' }}
 jobs:
   echo:
     runs-on: ubuntu-latest
