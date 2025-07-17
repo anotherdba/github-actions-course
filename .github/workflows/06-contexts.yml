@@ -1,6 +1,5 @@
 name: 06-contexts
 on:
-  push:
   workflow_dispatch:
     inputs:
       debug:
