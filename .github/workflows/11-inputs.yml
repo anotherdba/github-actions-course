@@ -16,7 +16,7 @@ on:
           - v2
           - v3
         default: v3
-         description: "Release from which to build and deploy"
+        description: "Release from which to build and deploy"
 jobs:
   build:
     runs-on: ubuntu-latest
